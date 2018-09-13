@@ -85,6 +85,7 @@ export class HeroService {
       catchError(this.handleError<Hero>('addHero'))
     );
   }
+
   /** DELETE: delete the hero from the server */
   deleteHero(hero: Hero | number): Observable<Hero> {
     const id = typeof hero === 'number' ? hero : hero.id;
